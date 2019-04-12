@@ -1,0 +1,6 @@
+{
+  "ethereumRPCEndpoint":"https://kovan.infura.io",
+  "privateKey": "691E8954EBEA7F2830243C941CF5F9D37F3B2A7D699D5576E4D6B5F4890068B1",
+  "frequency": 5,
+  "oracleEndpoint": "localhost:50051"
+}
