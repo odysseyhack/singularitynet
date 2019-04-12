@@ -43,7 +43,7 @@ class Meter:
             print(payload.signature)
             print(payload.value)
 
-            with grpc.insecure_channel('localhost:50051') as channel:
+            with grpc.insecure_channel(self.config['oracleEndpoint']) as channel:
                 stub = oracle_pb2_grpc.MeterStub(channel)
                 response = stub.MeterPushData(payload)
                 print("Response received: " + str(response.success))
