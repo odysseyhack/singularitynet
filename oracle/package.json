@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/odysseyhack/singularitynet/issues"
   },
-  "homepage": "https://github.com/odysseyhack/singularitynet#readme"
+  "homepage": "https://github.com/odysseyhack/singularitynet#readme",
+  "dependencies": {
+    "javascript-opentimestamps": "^0.4.3"
+  }
 }

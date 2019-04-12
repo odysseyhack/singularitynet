@@ -14,21 +14,21 @@ service Carbon {
 
 message MeterPushDataRequest {
   int64 timestamp = 1;
-  string signature = 2;
+  Signature signature = 2;
   float value = 3; 
 }
 
 message ForecasterPushDataRequest {
   Household Household = 1;
   Timeframe timeframe = 2;
-  string signature = 3;
+  Signature signature = 3;
   float value = 4; 
 }
 
 message CarbonPushDataRequest {
   string community = 1;
   Timeframe timeframe = 2;
-  string signature = 3;
+  Signature signature = 3;
   float value = 4; 
 }
 
@@ -40,6 +40,11 @@ message Timeframe {
 
 message Household {
   string publickKey = 2;
+}
+
+message Signature {
+  string message = 1;
+  string signature = 2;
 }
 
 message Reply {
