@@ -1,2 +1,4 @@
 # Protobuf generated artifacts
 *_pb2*
+# Dependencies
+vendor
