@@ -25,29 +25,21 @@ def get_forecasting_producer():
     log.info('SingularityNET platform config: %s' % config)
     session = Session(config)
     log.info('SingularityNET platform session: %s' % session)
-    client = Client(session, "snet", "cntk-lstm-forecast", AutoFundingFundingStrategy(amount_cogs = 10, expiration = "+10days"))
+    client = Client(session, "snet", "fonio-forecast", AutoFundingFundingStrategy(amount_cogs = 10, expiration = "+10days"))
     log.info('SingularityNET platform client: %s' % client)
     return client
 
-def send_data(unixStart, unixEnd, producer, consumer):
+def send_data(unixStart, unixEnd, position, producer, consumer):
     log.info('pull data from forecasting service')
-    if False:
-        # TODO: check with Artur how to receive next prediction properly
-        input = producer.classes.Input(
-                    window_len = 20,
-                    word_len = 5,
-                    alphabet_size = 5,
-                    source_type = 'financial',
-                    source = 'yahoo',
-                    contract = 'AMZN',
-                    start_date = "2017-01-01",
-                    end_date = "2018-12-10"
-                )
-        output = producer.stub.forecast(input)
-        log.info('data received: %s' % output)
-        # TODO: set `value` properly see below
-    else:
-        value = 1.0
+    input = producer.classes.Input(
+                num_points = 1 + int(position / 14),
+                input_dim = 14
+            )
+    log.info('input: %s' % input)
+    output = producer.stub.forecast(input)
+    log.info('data received: %s' % output)
+    value = output.output_points[position - 1]
+
     log.info('push data to oracle')
     signature = None # TODO: check with Marco
     household = None # TODO: check with Marco
@@ -81,13 +73,15 @@ def run():
         # main loop
         period = args.period_seconds
         unixStart = now() - period
+        position = 1
         while True:
             unixEnd = now()
             try:
-                send_data(unixStart, unixEnd, forecasting_producer, forecasting_consumer)
+                send_data(unixStart, unixEnd, position, forecasting_producer, forecasting_consumer)
             except Exception as e:
                 log.exception('exception in the main loop')
             unixStart = unixEnd
+            position += 1
 
             log.info('sleep for %d seconds' % period)
             time.sleep(period)
