@@ -75,6 +75,37 @@ Hardware can be either built from recycled parts that are found in excessive amo
 
 This will allow anyone to connect to a global distributed service.
 
+fonio production ai planning
+
+
+balanced ecosystems with AI different species with different properties in an ecosystem and let it be more and more resilient
+country of chad --> ideal starting place, people are driven because people die of Hunger, if they do not help each other they will die of hunger
+african ai researchers
+Narrative needs help --> grain before french colonists came. Moment where we are in the mindset of the people. Help people be proud about it (documentary netflix).
+fruitful fields became deserts.
+
+Building it as a digitsl twin --> underlying values to redefine the sustainable development goals -- suggestion to approach
+if you work on sdg 7 you also work on sdg 9
+
+healtjhy food community is a lot bigger --> what kind of food/behavior/diet
+
+solving world problem --> giving back people healthiest grain on earth, bringing back fruitful fields and it comes from Chad
+what we can learn from the poorest country on earth, helping each other.
+
+true engine --> biomimicry in emergence and anti-fragile --> AI biomimicry
+helping building blocks that come together, general module for fonio, distributed nature as in OpenCog.
+games 14 to 18 years old where they can discover this kind of thinking
+collaborative thinking, power in society.
+understanding help and friendship and interconnection.
+
+OpenCog knowledge graphs
+
+ben right lessons to grow up
+
+
+
+NO ECONOMIC MODEL ALWAYS CHALLENGE THIS IN OUR PLANS
+
 ## Step 6: Design the digital world to connect humans. Design as a social and warm hub.
 Within our system one can create an identity and join into a community with a specific impact goal, such as fighting the hunger world problem in Chad in our fonio project. By using Momentum Voting from the Giveth Team we can have people suggest the next impact goals to work on to tackle this problem and collaborate together on, and then vote on what they want to work on next depending on what is most needed in the moment. This allows for a more fluid governance process where collaboration is motivated and where there is enough flexibility to change course if needed to reach the final destination of the solution.
 
