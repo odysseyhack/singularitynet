@@ -4,19 +4,16 @@ const grpc      = require("grpc")
 const services  = require("./../protos/build/js/oracle_grpc_pb.js")
 
 const {
-  meterPushData,
   forecasterPushData,
-  carbonPushData,
-  toReply
+  forecasterFetchData
 } = require("./handlers")
 
 function main() {
   const server = new grpc.Server()
-  server.addService(services.MeterService, { 
-    "meterPushData": (call, callback) => callback(null, toReply(call)),
-    "forecasterPushData": (call, callback) => callback(null, toReply(call)),
-    "carbonPushData": (call, callback) => callback(null, toReply(call)), 
-  })
+  server.addService(services.ForecasterService, { 
+    "forecasterPushData": forecasterPushData,
+    "forecasterFetchData": forecasterFetchData
+  });
 
 
   //Bind server

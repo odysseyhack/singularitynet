@@ -1,13 +1,35 @@
 syntax = "proto3";
 
 service Forecaster {
-  rpc ForecasterPushData(ForecasterPushDataRequest) returns (Reply) {}
+  rpc ForecasterFetchData(ForecasterFetchDataRequest) returns (ForecasterFetchDataReply) {}
+  rpc ForecasterPushData(ForecasterPushDataRequest) returns (ForecasterPushDataReply) {}
+}
+
+message ForecasterFetchDataRequest {}
+
+message ForecasterFetchDataReply {
+  bool success = 1;
+  repeated Forecast forecast = 2;
 }
 
 message ForecasterPushDataRequest {
   string community = 1;
   Timeframe timeframe = 2;
   Signature signature = 3;
+  float value = 4; 
+}
+
+
+message ForecasterPushDataReply {
+  bool success = 1;
+  string derivedPublickKey = 2;
+}
+
+
+message Forecast {
+  string community = 1;
+  int64 unixStart = 2;
+  int64 unixEnd = 3;
   float value = 4; 
 }
 
@@ -20,12 +42,6 @@ message Signature {
   string message = 1;
   string signature = 2;
 }
-
-message Reply {
-  bool success = 1;
-  string derivedPublickKey = 2;
-}
-
 
 
 
