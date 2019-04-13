@@ -20,7 +20,7 @@
     "endpoints": [
         {
             "group_name": "default_group",
-            "endpoint": "https://bh.singularitynet.io:7087"
+            "endpoint": "http://bh.singularitynet.io:7087"
         }
     ]
 }

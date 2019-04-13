@@ -74,7 +74,11 @@ class ForecastServicer(grpc_bt_grpc.ForecastServicer):
             y_data, predictions = fc.forecast(self.num_points)
             # plot_predictions(y_data, predictions)
 
-            self.response.output_points = str(predictions).encode("utf-8")
+            response = dict()
+            for idx, point in enumerate(predictions):
+                response["points"].append(point)
+
+            self.response.output_points = str(response).encode("utf-8")
 
             log.debug("forecast({},{}) = {}".format(self.model_file,
                                                     self.num_points,
