@@ -29,35 +29,60 @@ def get_forecasting_producer():
     log.info('SingularityNET platform client: %s' % client)
     return client
 
-def send_data(unixStart, unixEnd, position, producer, consumer):
-    log.info('pull data from forecasting service')
-    input = producer.classes.Input(
-                num_points = 1 + int(position / 14),
-                input_dim = 14
-            )
-    log.info('input: %s' % input)
-    output = producer.stub.forecast(input)
-    log.info('data received: %s' % output)
-    value = output.output_points[position - 1]
-
-    log.info('push data to oracle')
-    signature = None # TODO: check with Marco
-    community = 'fonio'
-    request = oracle_pb2.ForecasterPushDataRequest(
-            timeframe = oracle_pb2.Timeframe(
-                unixStart = unixStart,
-                unixEnd = unixEnd),
-            value = value,
-            signature = signature,
-            community = community)
-    log.info('forecasting request for oracle: %s' % request)
-    reply = consumer.ForecasterPushData(request)
-    log.info('reply from oracle: %s' % reply)
-    if not reply.success:
-        log.error('could not push data to oracle, reply: %s' %reply)
-
 def now():
     return int(time.time())
+
+
+class DataPump:
+
+    def __init__(self, producer, consumer, period):
+        self.producer = producer
+        self.consumer = consumer
+        self.period = period
+        self.position = 1
+
+    def get_prediction(self):
+        log.info('pull data from forecasting service')
+        input = self.producer.classes.Input(
+                    num_points = 1 + int(self.position / 14),
+                    input_dim = 14
+                )
+        log.info('input: %s' % input)
+        output = self.producer.stub.forecast(input)
+        log.info('data received: %s' % output)
+        return output.output_points[self.position - 1]
+
+    def send_prediction(self, value):
+        log.info('push data to oracle')
+        signature = None # TODO: check with Marco
+        community = 'fonio'
+        request = oracle_pb2.ForecasterPushDataRequest(
+                timeframe = oracle_pb2.Timeframe(
+                    unixStart = self.unixStart,
+                    unixEnd = self.unixEnd),
+                value = value,
+                signature = signature,
+                community = community)
+        log.info('forecasting request for oracle: %s' % request)
+        reply = self.consumer.ForecasterPushData(request)
+        log.info('reply from oracle: %s' % reply)
+        if not reply.success:
+            log.error('could not push data to oracle, reply: %s' %reply)
+
+    def run(self):
+        self.unixStart = now() - self.period
+        while True:
+            self.unixEnd = now()
+            try:
+                value = self.get_prediction()
+                self.send_prediction(value)
+            except Exception as e:
+                log.exception('exception in the main loop')
+            self.unixStart = self.unixEnd
+            self.position += 1
+
+            log.info('sleep for %d seconds' % self.period)
+            time.sleep(self.period)
 
 def run():
     log.basicConfig(level=log.INFO)
@@ -69,22 +94,9 @@ def run():
         log.info('gRPC channel: %s', channel)
         forecasting_consumer = oracle_pb2_grpc.ForecasterStub(channel)
         forecasting_producer = get_forecasting_producer()
-
-        # main loop
-        period = args.period_seconds
-        unixStart = now() - period
-        position = 1
-        while True:
-            unixEnd = now()
-            try:
-                send_data(unixStart, unixEnd, position, forecasting_producer, forecasting_consumer)
-            except Exception as e:
-                log.exception('exception in the main loop')
-            unixStart = unixEnd
-            position += 1
-
-            log.info('sleep for %d seconds' % period)
-            time.sleep(period)
+        data_pump = DataPump(forecasting_producer, forecasting_consumer,
+                              args.period_seconds)
+        data_pump.run()
 
 
 if __name__ == '__main__':
