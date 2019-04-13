@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+message Households {
+    repeated Household households = 1;
+}
+
+message Household {
+    string identity = 1;
+    string type = 2;
+}
