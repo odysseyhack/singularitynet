@@ -6,7 +6,7 @@ Building an ecosystem towards abundance to solve hunger problems using the fonio
 ## Step 0: What is our passion?
 We want to use decentralized artificial intelligence for the benefit of our world, to tackle world problems, and to build ecosystem that are meaningful, impactful, and world-changing.
 
-We want to be open-minded and inspired by the Odyssey Hackathon, and as such we killed the idea we wanted to execute at the end of day 1, and we were motivated to solve a bigger problem than we could have ever thought we could even imagine to tackle: World Hunger.
+We want to be open-minded and inspired, and as such we killed the idea after a couple of iterations and we pivoted from the idea we initially had, and we were motivated to solve a bigger problem than we could have ever thought we could even imagine to tackle: World Hunger.
 
 We believe that by creating an AI-powered decentralized production ecosystem for farmers, we could help them produce many foods in abundance, such as with the fonio grain which is our main example.
 
@@ -27,6 +27,7 @@ Chad Situation
 2. The chronicity of the crisis requires a new way of working combining humanitarian and development interventions.
 3. It is reported that in 2018, $282.5 million would be needed to save the lives of those most affected by the food and nutrition crisis in Chad.
 
+Income, malnutrition
 
 Note: desertification.
 
@@ -103,7 +104,7 @@ In our idea, crowdsourcing will be our main means of creating the solutions need
 ## Overview
 We are building a system that a community (local government, club, commons, etc) can use to define good behaviors, track user behavior, identify people who enact good behaviors to possibly reward them, verify the effects of enacting such behavior for the community. The system aims to be generic enough that you can use it to track different problems: resource consumption, social behavior, political action, education policies, etc.
 
-For the purposes of this hackaton, we are building a system that tracks gas consumption in a population and identifies households that consume less gas than average for their household type with the goal of rewarding such households within the community (with things such as tax credits, or free public transportation, etc).
+For the purposes of this hackathon, we are building a system that tracks gas consumption in a population and identifies households that consume less gas than average for their household type with the goal of rewarding such households within the community (with things such as tax credits, or free public transportation, etc).
 
 
 
