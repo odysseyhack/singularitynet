@@ -61,6 +61,8 @@ def send_data(unixStart, unixEnd, producer, consumer):
     log.info('forecasting request for oracle: %s' % request)
     reply = consumer.ForecasterPushData(request)
     log.info('reply from oracle: %s' % reply)
+    if not reply.success:
+        log.error('could not push data to oracle, reply: %s' %reply)
 
 def now():
     return int(time.time())
@@ -81,7 +83,10 @@ def run():
         unixStart = now() - period
         while True:
             unixEnd = now()
-            send_data(unixStart, unixEnd, forecasting_producer, forecasting_consumer)
+            try:
+                send_data(unixStart, unixEnd, forecasting_producer, forecasting_consumer)
+            except Exception as e:
+                log.exception('exception in the main loop')
             unixStart = unixEnd
 
             log.info('sleep for %d seconds' % period)
