@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package oracle;
+
 service Forecaster {
   rpc ForecasterFetchData(ForecasterFetchDataRequest) returns (ForecasterFetchDataReply) {}
   rpc ForecasterPushData(ForecasterPushDataRequest) returns (ForecasterPushDataReply) {}
