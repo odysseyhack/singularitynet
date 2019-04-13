@@ -84,3 +84,7 @@ typings/
 .dynamodb/
 
 *.ots
+
+*.db 
+
+/protos/build/

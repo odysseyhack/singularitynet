@@ -25,9 +25,8 @@ const fs             = require('fs');
    * @param {hex} hex - The timestamp hex endoded.
    * @return {Promise<fileOts,Error>} if resolve return new ots file serialized as bytes.
    */
-async function stamp(hex) {
-  const hexEncodedFile = Buffer.from(hex,'hex');
-  const detached = OpenTimestamps.DetachedTimestampFile.fromBytes(new OpenTimestamps.Ops.OpSHA256(), hexEncodedFile);
+async function stamp(buffer) {
+  const detached = OpenTimestamps.DetachedTimestampFile.fromBytes(new OpenTimestamps.Ops.OpSHA256(), buffer);
   try {
       await OpenTimestamps.stamp(detached);
       const ots = detached.serializeToBytes();
