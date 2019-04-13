@@ -8,8 +8,9 @@ python -m grpc_tools.protoc -I${ROOT}/oracle/protos --python_out=.  \
 
 # install SingularityNET SDK
 mkdir -p vendor
-git clone --depth=1 --single-branch --branch new-sdk \
-	git@github.com:astroseger/snet-cli.git \
+git clone --depth=1 --single-branch \
+	--branch fix-rename-tmp-between-different-filesystems \
+	git@github.com:vsbogd/snet-cli.git \
 	./vendor/snet-cli
 pushd vendor/snet-cli
 sudo apt-get install libudev-dev libusb-1.0-0-dev
