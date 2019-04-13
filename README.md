@@ -93,6 +93,46 @@ In our idea, crowdsourcing will be our main means of creating the solutions need
 3. Teams at the hackathon, the United Nations, European Union, World Food Programme, World Bank, the Government of Chad, and many more organizations that can contribute their expert knowledge and enable the acceleration of the building of critical infrastructures needed.
 
 
+# Score Model
+## Quality of Prototype
+0-5 points - technics
+Does the POC represent the Engine that drives the narrative to full extent?
+To what extent is the solution usable as blueprint for breaking the economical paradigm: did this reflect on radical new/earlier disregarded use of technologies or technology architecture or design?
+Disruptive and radical different use of blockchain & AI Technology to come to new architectures (building commons/ecosystems of abundance).
+Deemed relevant as inspiration for new standard designs, building blocks or blueprints.
+If issues arise that lower the code score from the new-ness of code, this can be evaluated as a bonus proof of new-ness.
+
+## Impact
+0-5 points
+`How does the team view at itself as part of an ecosystem? How do they shape this ecosystem for maximizing the opportunity for large scale adoption of the global ownerless ecosystems that offer solutions?
+
+Why do people care without wanting to become the owner? Why is it beneficial for all? Why do people voluntarily participate?
+How does your solution help social interaction amongst people: how does it improve being heard, seen and understood? What pain did you erase?
+Evaluate your solution as part of a global machine 2 machine ecosystem: what is the impact of this system, which role does your solution have in this system? What impact can be pinpointed to your solution?
+
+Not only removing lockins, forced handeling and develop towards solutions that are warm. But also: does the system evolve towards an ecosystem where people “do not care” (“oxygen system resilience).
+Why a game changer? How does it break the economical paradigm of today? What are the amazing benefits? Why beyond incremental change? Feasible implementation in narrative and POC?
+
+## A 21st Century Team & solution
+Nature 2.0 proof & kudo’s + behavior of team.
+Strongness of the new nature 2.0 narrative of the team, the extent to which they were able to build a community around it before and during the hackathon: fantasy like f.e. Time travel) or (big) underlying trends? Persue of tipping point?
+Check 100% purpose driven, 100% intrinsic motivation. Broken economical paradigm so no profit.
+Did the team ethical challenges because of disruption? Did they formulate them as hurdles, design challenges. Are there first approaches/ideas? Do they lead to new engineering framework? What is their view on (flawed) humans and how did they build it into their solution? Of course is the solution for all people and planet?
+Feasible and realistic open source community collaboration: strategy to pursue a tipping point solution. Connecting users - builders - designers.
+
+Cooperation during the hackathon, inspiring, sharing, do they practice what they preach.
+Why is it a community and not a cult? Is the solution viable? Is there a sufficient bridging strategy between old and new world?
+
+## Transition Plan
+0-5 points
+Is it a feasible forkable public utility network that can transform in a globel ownerless ecosystem that proivides a basic need or solves a big ownerless problem?
+Is there a strong intrinsic incentive strategy: is the ecosystem intriniscally incentivising: is the role of tokens information processing and not bringing back extrinsic motivation via a backdoor: stories from all stakeholder POV.
+Did they address and solve to a realistic extent all the hurdles and challenges during incubation or did they bypass with handy assumptions?
+Did they interact to identify hurdles with stakeholders, did they solve or pivot to succumb them?
+Is there a funding strategy, building strategy, open source sharing strategy, (proven) community strategy.
+Is there an entising story to engage the critical infrastructures of the world? Is there a clear link to their research questions? Could they engage them?
+Is there a clear and entising crowdfunding, crowd sourcing strategy?
+Where they able to connect to mayor players in the blockchain & AI world (in and outside the track - during the hackathon).
 
 
 # Below will be rephrased and repurposed to the new idea.
