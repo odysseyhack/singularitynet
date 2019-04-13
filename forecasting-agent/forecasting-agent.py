@@ -42,14 +42,14 @@ def send_data(unixStart, unixEnd, position, producer, consumer):
 
     log.info('push data to oracle')
     signature = None # TODO: check with Marco
-    household = None # TODO: check with Marco
+    community = 'fonio'
     request = oracle_pb2.ForecasterPushDataRequest(
             timeframe = oracle_pb2.Timeframe(
                 unixStart = unixStart,
                 unixEnd = unixEnd),
             value = value,
             signature = signature,
-            Household = household)
+            community = community)
     log.info('forecasting request for oracle: %s' % request)
     reply = consumer.ForecasterPushData(request)
     log.info('reply from oracle: %s' % reply)
