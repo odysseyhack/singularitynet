@@ -4,7 +4,7 @@ ROOT=..
 
 # compile protobuf
 python -m grpc_tools.protoc -I${ROOT}/oracle/protos --python_out=.  \
-	--grpc_python_out=. ${ROOT}/oracle/protos/oracle.proto
+	--grpc_python_out=. oracle.proto
 
 # install SingularityNET SDK
 mkdir -p vendor
