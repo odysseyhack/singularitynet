@@ -104,3 +104,7 @@ venv.bak/
 .mypy_cache/
 
 content_db/
+
+households/db
+households/ots
+node_modules
