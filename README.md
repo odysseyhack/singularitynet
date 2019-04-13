@@ -89,8 +89,12 @@ A community is structured as follows:
 In our idea, crowdsourcing will be our main means of creating the solutions needed. E.g.:
 1. Recycling partners that can donate their hardware trash to us to rebuild modular hardware systems for fonio farmers.
 2. AI developers within the SingularityNET community that can contribute an AI service to help hardware systems perform food processing tasks better.
-3. Teams at the hackathon, the United Nations, European Union, World Food Programme, World Bank, the Government of Chad, and many more organizations that can contribute their expert knowledge and enable the acceleration of the building of critical infrastructures needed. 
+3. Teams at the hackathon, the United Nations, European Union, World Food Programme, World Bank, the Government of Chad, and many more organizations that can contribute their expert knowledge and enable the acceleration of the building of critical infrastructures needed.
 
+
+
+
+# Below will be rephrased and repurposed to the new idea.
 
 ## Narrative
 
