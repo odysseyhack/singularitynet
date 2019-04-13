@@ -1,5 +1,38 @@
 # SingularityNET Odyssey Nature 2.0 entry
 
+SingularityNET aims to use decentralized artificial intelligence to solve big world problems in a collaborative manner. 
+
+Problem
+Starving people in Chad.
+
+- Refugee
+- Lack of resources
+- Lack of knowledge about Fonio
+
+solution
+Facilitate a community achieving communal goals around Fonio
+
+Modular machines for processing food
+Recycled machines through reuse of resources
+
+Benefit
+Refugee camps --> teach to grow, teach process of food, constructing jobs, self sustaining
+
+Food, jobs, materials, and a level up the happiness scale.
+
+Next steps
+- We have the ability to test it, as the government of Chad committed to us 5x 200 hectares of land to test the solution on. Not only do we have the ability to test it, we have the responsibility to test it, to save people from starving to death.
+- Expand to sub-saharan Africa
+
+Why is it a commons?
+- It can grow anywhere
+- Cheap machines
+- Knowledge --> grow, process, cook
+
+Extra
+Need to help each other in order to live, impact goals.
+
+
 ## Challenge
 Building an ecosystem towards abundance to solve hunger problems using the fonio grain.
 
@@ -182,7 +215,7 @@ Connecting users builders designers
 
 
 
-## interconnectedness
+## Interconnectedness
 How could your solution virally effect other value chains, basic needs or ownerless problems of the world.
 
 
@@ -249,7 +282,7 @@ Using OpenCog to create stories that make the people of Chad proud of their foni
 ## Narrative
 First three phases
 first it has not totally disappeared, grains grows there since 5000 years
-all cultures and tribes that live in the subsajharan hundreds of tribes, had fonio in their staple daily food. Several tribes have a religious name for fonio, because it was so important in their daily food for the right types of proteine and they knew how to grow it. 
+all cultures and tribes that live in the subsajharan hundreds of tribes, had fonio in their staple daily food. Several tribes have a religious name for fonio, because it was so important in their daily food for the right types of proteine and they knew how to grow it.
 
 The Godon called it po. Po meant origin of the universe. fonio was almost religious. subsaharan areas senegal to sudan, fonio was known as a seed which is a grass seed. it grows around the rain season, fastest growing seed that we know, 6.5 to 8 weeks growing. Then harvested and then comes the tricky part, you have the fotos of women long tubes of phonio and seed is so incrediblky small that none of the regular types of machinery could do this, but here in the western part nobody can build a machine that can peel fonio. but in subsaharan africa (pictures available)developed a machine, one of them has been here in holland and he present it to the best machine  builder and he said no i cant build something like that. this is important because it limits themachine to small communities, because the machine needs to be produced (right now 3000-3500 euro per machine). This machine needs to be in the place where we want to start the production and reintroduction of fonio in chad. there is a farm where a lot of pictures and films and this farm is called ledouabvere (the green fingers) a family farm, mother with kids and personel, they tried almost every seed in the world to grow in the desert soil. They bring organic matter in the ground, and if you have water and knowledge and people know what they are doing, then you can grow almost anything. under the subsahara is one of the largest sweet water reservoirs in the world. many people dont know that. from senegal to sudan enormous amounts of water, sometimes half a meter sometimes 90 meters deep in the ground. ledouvere has the water and bought some land last year that they want to take into production this year, around rain season (april/may) they want to grow fonio as an agricultural activity. They want to do this because they want to make a set of lessons for at first small holder farmers in chad, that support and agree with reintroducing fonio in staple food menu because it is local and almost for nothing. One of the few seeds where we must be able to create abundance. the requirements are so low. the seed is good to eat and phd from 2015 is fonio important contribution to staple food in region: yes it is. (report can be shared). PHD says (wageningen) subsahara iron deficiency and zink deficiency in chat 12% had food scarcity problems, this summer will be 20%, it is around 15-20% dont know if they will have a meal. the nutrition problem is immense. Reason for women to be vulnerable is higher. fonio in the fight against this main deficiency of iron deficiency.
 
