@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "display_name": "Fonio Production Forecast",
+    "encoding": "proto",
+    "service_type": "grpc",
+    "payment_expiration_threshold": 40320,
+    "model_ipfs_hash": "QmPTQq9X1dYCYh2PCjWb3jN6QvPYNCxqZMWxXg5f5bHsbZ",
+    "mpe_address": "0x7E6366Fbe3bdfCE3C906667911FC5237Cc96BD08",
+    "pricing": {
+        "price_model": "fixed_price",
+        "price_in_cogs": 1
+    },
+    "groups": [
+        {
+            "group_name": "default_group",
+            "group_id": "mFSA0z82E7YVOXR8zmJ/t74IExMCfw89i9EBKLcCE4Q=",
+            "payment_address": "0xFF2a327ed1Ca40CE93F116C5d6646b56991c0ddE"
+        }
+    ],
+    "endpoints": [
+        {
+            "group_name": "default_group",
+            "endpoint": "https://bh.singularitynet.io:7087"
+        }
+    ]
+}

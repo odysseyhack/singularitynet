@@ -1,52 +1,47 @@
 syntax = "proto3";
 
-service Meter {
-  rpc MeterPushData(MeterPushDataRequest) returns (Reply) {}
-}
-
 service Forecaster {
-  rpc ForecasterPushData(ForecasterPushDataRequest) returns (Reply) {}
+  rpc ForecasterFetchData(ForecasterFetchDataRequest) returns (ForecasterFetchDataReply) {}
+  rpc ForecasterPushData(ForecasterPushDataRequest) returns (ForecasterPushDataReply) {}
 }
 
-service Carbon {
-  rpc CarbonPushData(CarbonPushDataRequest) returns (Reply) {}
-}
+message ForecasterFetchDataRequest {}
 
-message MeterPushDataRequest {
-  int64 timestamp = 1;
-  string signature = 2;
-  float value = 3; 
+message ForecasterFetchDataReply {
+  bool success = 1;
+  repeated Forecast forecast = 2;
 }
 
 message ForecasterPushDataRequest {
-  Household Household = 1;
-  Timeframe timeframe = 2;
-  string signature = 3;
-  float value = 4; 
-}
-
-message CarbonPushDataRequest {
   string community = 1;
   Timeframe timeframe = 2;
-  string signature = 3;
+  Signature signature = 3;
   float value = 4; 
 }
 
-message Timeframe {
-  int64 duration = 1;
-  int64 unixStart = 2;
-  int64 unixEnd = 3;
-}
 
-message Household {
-  string publickKey = 2;
-}
-
-message Reply {
+message ForecasterPushDataReply {
   bool success = 1;
   string derivedPublickKey = 2;
 }
 
+
+message Forecast {
+  string community = 1;
+  int64 unixStart = 2;
+  int64 unixEnd = 3;
+  float value = 4; 
+}
+
+message Timeframe {
+  int64 unixStart = 1;
+  int64 unixEnd = 2;
+}
+
+message Signature {
+  string message = 1;
+  string signature = 2;
+}
 
 
 
