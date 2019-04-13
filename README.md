@@ -124,6 +124,80 @@ In our idea, crowdsourcing will be our main means of creating the solutions need
 3. Teams at the hackathon, the United Nations, European Union, World Food Programme, World Bank, the Government of Chad, and many more organizations that can contribute their expert knowledge and enable the acceleration of the building of critical infrastructures needed.
 
 
+
+
+#Step 1 Problem/Case
+What basic need of ownerless problems are you solving?
+What in the current processes is crazy although we deem it normal and can be used as potential to operate?
+
+
+## Step 0-6 Solution - Kudo’s
+What is the added value of your solution being a commons, an ecosystem towards abundance or an ownerless system?
+
+
+
+## Minimal viable product/POC
+[Prototype at the end of hackathon: why is what you build the engine behind your solution? Why is what you build beyond the imaginable solutions of today? (ENGINE)
+
+
+## Step 3 or 2 -  X-factor [UNIMAGINABLE/MAGIC]
+Why a game changer? How does it break the economical paradigm of today? What are the amazing benefits? Why beyond incremental change?
+
+
+
+#Step 7 - Large scale adoption
+
+Which ecosystem approach and trends make your solution likely to fly? Amazing funding strategy/partners: part of global ecosystem.
+
+
+
+##Step 4: Impact on user
+Why do people care without wanting to become the owner. Why is it beneficial for all? Why do people voluntary participate.
+
+
+
+## Step 5: impact on user-context
+How does your solution help social interaction amongst people. How does it improve being heard, seen and understood/what pain did you erase.
+
+
+
+## Impact on society step 6
+Evaluate your solution as part of a global machine 2 machine ecosystem , what is the impact of this system, which role does your solution have in this system? What impact can be pinpointed to your solution?
+
+
+
+
+## Jedi code validation
+Your better code hub score + is it a mature prototype?
+
+
+#JEDI: Legal arrangements, political implications & transitioin strategy
+Challenges/chances of worldwide system, ownerless/unstoppable.
+
+
+
+## Step 3-7: Open source community collaboration strategy
+
+Connecting users builders designers
+
+
+
+## interconnectedness
+How could your solution virally effect other value chains, basic needs or ownerless problems of the world.
+
+
+
+** Narrative of transition, transition roadmap, technical roadmap & tipping points (including user/stakeholder engagement)
+
+
+1000 day target **
+make it smart
+Milestones up ahead **
+stakeholders and partners
+Milestones now achieved **
+eam and stakeholders/partners
+
+
 # Score Model
 ## Quality of Prototype
 0-5 points - technics
@@ -164,6 +238,10 @@ Is there a funding strategy, building strategy, open source sharing strategy, (p
 Is there an entising story to engage the critical infrastructures of the world? Is there a clear link to their research questions? Could they engage them?
 Is there a clear and entising crowdfunding, crowd sourcing strategy?
 Where they able to connect to mayor players in the blockchain & AI world (in and outside the track - during the hackathon).
+
+# OpenCog
+Using OpenCog to create stories that make the people of Chad proud of their fonio grain and to inspire the others in the world. 
+
 
 
 # Below will be rephrased and repurposed to the new idea.
