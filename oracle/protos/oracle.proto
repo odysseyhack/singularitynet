@@ -1,31 +1,10 @@
 syntax = "proto3";
 
-service Meter {
-  rpc MeterPushData(MeterPushDataRequest) returns (Reply) {}
-}
-
 service Forecaster {
   rpc ForecasterPushData(ForecasterPushDataRequest) returns (Reply) {}
 }
 
-service Carbon {
-  rpc CarbonPushData(CarbonPushDataRequest) returns (Reply) {}
-}
-
-message MeterPushDataRequest {
-  int64 timestamp = 1;
-  Signature signature = 2;
-  float value = 3; 
-}
-
 message ForecasterPushDataRequest {
-  Household Household = 1;
-  Timeframe timeframe = 2;
-  Signature signature = 3;
-  float value = 4; 
-}
-
-message CarbonPushDataRequest {
   string community = 1;
   Timeframe timeframe = 2;
   Signature signature = 3;
@@ -35,10 +14,6 @@ message CarbonPushDataRequest {
 message Timeframe {
   int64 unixStart = 1;
   int64 unixEnd = 2;
-}
-
-message Household {
-  string publickKey = 2;
 }
 
 message Signature {
