@@ -1,7 +1,8 @@
 'use strict'
 
-const messages = require("./../protos/build/js/oracle_pb.js")
-const store = require("../store")
+const messages  = require("./../protos/build/js/oracle_pb.js");
+const store     = require("../store");
+const notary    = require("../notary");
 
 function forecasterPushData(call, callback) {
 
@@ -11,17 +12,19 @@ function forecasterPushData(call, callback) {
   const value = call.request.getValue();
   const community = call.request.getCommunity();
 
+
   //Store in the blockchain abstraction
-  store.insert({ timeframe, value, community })
+  const obj = { timeframe, value, community };
+  notary.stamp(new Buffer.from(JSON.stringify(obj), 'utf8')).then(({ots, hash}) => {
+    store.insert({...obj, ots, hash});
+    const reply = new messages.ForecasterPushDataReply();
+    reply.setSuccess(true)
 
-  const reply = new messages.ForecasterPushDataReply();
-  reply.setSuccess(true)
-  reply.getDerivedpublickkey(pubKey)
-
-  callback(null, reply);
+    callback(null, reply);
+  });
 }
 
-function forecasterFetchData(call, callback) {
+function forecasterFetchData(_, callback) {
   store.find({}, (err, docs) => {
 
     if (err) { callback(err, null); return };
@@ -34,7 +37,6 @@ function forecasterFetchData(call, callback) {
       forecast.setCommunity(doc.community);
 
       return forecast;
-
     });
 
     const reply = new messages.ForecasterFetchDataReply();
