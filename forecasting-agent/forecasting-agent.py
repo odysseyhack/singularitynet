@@ -44,10 +44,10 @@ def send_data(unixStart, unixEnd, producer, consumer):
                     end_date = "2018-12-10"
                 )
         output = producer.stub.forecast(input)
+        log.info('data received: %s' % output)
         # TODO: set `value` properly see below
     else:
         value = 1.0
-    log.info('data received: %s' % output)
     log.info('push data to oracle')
     signature = None # TODO: check with Marco
     household = None # TODO: check with Marco
