@@ -6,6 +6,8 @@ const dataContainer = document.getElementById("dataContainer")
 
 window.Chart.defaults.global.maintainAspectRatio = false
 
+window.currentChart = null
+
 function createTableRow(dataset) {
   const { name, timeframe, goalDataURI, realDataURI, label, labels, data, goalData } = dataset
 
@@ -42,7 +44,10 @@ function createTableRow(dataset) {
         element.removeAttribute("active")
       }
       chartLink.setAttribute("active", "")
-      dataContainer.removeAttribute("hidden")
+      if (window.currentChart !== null && typeof(window.currentChart) !== "undefined") {
+        window.currentChart.destroy()
+      }
+      window.currentChart = dataContainer.removeAttribute("hidden")
       createLineChart(data, goalData, label, labels)
     } else {
       chartLink.removeAttribute("active")
