@@ -28,14 +28,14 @@
                         <span class="text-primary">Community</span></h2>
                     </div>
                 </div>
-                <div id="data-container">
+                <div id="dataContainer" hidden>
                     <div class="card transparent-card">
                         <div class="card-header pb-0">
                             <h4 class="card-title mt-2">Chart</h4>
                         </div>
                     </div>
                     <div class="row">
-                        <canvas id="myChart"></canvas>
+                        <canvas id="chart"></canvas>
                     </div>
                 </div>
                 <div class="row">
@@ -55,25 +55,7 @@
                                                 <th>Real-world data</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><a href="#" class="text-primary">Fonio yield</a></td>
-                                                <td><span class="text-pale-sky">Weekly</span></td>
-                                                <td><a href="#" class="text-primary">Link</a></td>
-                                                <td><a href="#" class="text-primary">Link</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#" class="text-primary">Death rate</a></td>
-                                                <td><span class="text-pale-sky">Yearly</span></td>
-                                                <td><a href="#" class="text-primary">Link</a></td>
-                                                <td><a href="#" class="text-primary">Link</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#" class="text-primary">Malnutrition</a></td>
-                                                <td><span class="text-pale-sky">Yearly</span></td>
-                                                <td><a href="#" class="text-primary">Link</a></td>
-                                                <td><a href="#" class="text-primary">Link</a></td>
-                                            </tr>
+                                        <tbody id="datasetsTable">
                                         </tbody>
                                     </table>
                                 </div>
@@ -84,30 +66,8 @@
             </div>
         </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
-    <script>
-        Chart.defaults.global.maintainAspectRatio = false
-        var ctx = document.getElementById("myChart").getContext("2d")
-        var myChart = new Chart(ctx, {
-            "type": "line",
-            "data": {
-                "labels": ["1", "2", "3"],
-                "datasets": [{
-                    "label": 'Yield in tonnes',
-                    "data": [10, 15, 3],
-                    "fill": false,
-                    "backgroundColor": "rgba(0, 0, 0, 0)",
-                    "borderColor": "rgba(200, 120, 200, 1)"
-                }, {
-                    "label": 'Yield in tonnes (goal)',
-                    "data": [11, 2, 4],
-                    "fill": false,
-                    "backgroundColor": "rgba(0, 0, 0, 0)",
-                    "borderColor": "rgba(120, 200, 200, 1)"
-                }]
-            }
-        })
-    </script>
+    <script src="./js/scripts.js"></script>
 </body>
+
 </html>
