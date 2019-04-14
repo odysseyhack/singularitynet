@@ -6,4 +6,4 @@ REPO=`dirname ${PWD}`
 docker run \
 	-v $REPO:/home/opencog/singularitynet \
 	-ti parts-donation \
-	python3 /home/opencog/singularitynet/parts-donation/parts-donation.py
+	python /home/opencog/singularitynet/parts-donation/parts-donation.py
