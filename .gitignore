@@ -104,3 +104,7 @@ venv.bak/
 .mypy_cache/
 
 content_db/
+serializer/db
+serializer/ots
+serializer/node_modules
+serializer/package-lock.json

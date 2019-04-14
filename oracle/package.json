@@ -7,7 +7,7 @@
     "compile-js": "mkdir -p ./protos/build/js && cd ./protos/build/js && grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./ --grpc_out=./ --plugin=protoc-gen-grpc=./../../../node_modules/grpc-tools/bin/grpc_node_plugin --proto_path ./../../ oracle.proto",
     "compile-web": "mkdir -p ./protos/build/web && cd ./protos/build/web && `which protoc` --plugin=\"protoc-gen-ts=./../../../node_modules/.bin/protoc-gen-ts\" --js_out=\"import_style=commonjs,binary:./\" --ts_out=\"service=true:./\" --proto_path ./../../ oracle.proto",
     "start-proxy": "`which grpcwebproxy` --backend_addr=localhost:9000 --run_tls_server=false",
-    "start-server": "`which node` --no-deprecation ./server/index.js"
+    "start-server": "`which node` --no-deprecation index.js"
   },
   "repository": {
     "type": "git",
@@ -21,11 +21,11 @@
   "homepage": "https://github.com/odysseyhack/singularitynet#readme",
   "dependencies": {
     "grpc": "^1.19.0",
+    "google-protobuf": "^3.7.1",
     "javascript-opentimestamps": "^0.4.3",
     "nedb": "^1.8.0"
   },
   "devDependencies": {
-    "google-protobuf": "^3.7.1",
     "grpc-tools": "^1.7.3",
     "ts-protoc-gen": "^0.9.0"
   }

@@ -8,7 +8,8 @@ const {
   forecasterFetchData
 } = require("./handlers")
 
-function main() {
+
+function start() {
   const server = new grpc.Server()
   server.addService(services.ForecasterService, { 
     "forecasterPushData": forecasterPushData,
@@ -19,6 +20,7 @@ function main() {
   //Bind server
   server.bind("0.0.0.0:9000", grpc.ServerCredentials.createInsecure())
   server.start()
+  console.log('Starting server on 9000')
 }
 
-main()
+module.exports = start;

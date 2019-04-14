@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+message Yields {
+    repeated Yield yields = 1;
+}
+
+message Yield {
+    string identity = 1;
+    int64 amount = 2;
+}
