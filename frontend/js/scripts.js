@@ -1,41 +1,10 @@
+const datasetsURL = "https://public.singularitynet.io/nature20/chad-datasets.json"
+
 const chartCanvas = document.getElementById("chart").getContext("2d")
 const datasetsTable = document.getElementById("datasetsTable")
 const dataContainer = document.getElementById("dataContainer")
 
 window.Chart.defaults.global.maintainAspectRatio = false
-
-const datasets = [
-  {
-    "name": "Fonio yield",
-    "timeframe": "Weekly",
-    "goalDataURI": "#",
-    "realDataURI": "#",
-    "label": "Yield in tonnes",
-    "labels": ["1", "2", "3", "4", "5"],
-    "data": [10, 15, 3],
-    "goalData": [11, 2, 4, 9, 12]
-  },
-  {
-    "name": "Death rate",
-    "timeframe": "Monthly",
-    "goalDataURI": "#",
-    "realDataURI": "#",
-    "label": "Death rate (per 100 inhabitants)",
-    "labels": ["1", "2", "3", "4", "5"],
-    "data": [10, 15, 3],
-    "goalData": [11, 2, 4, 9, 12]
-  },
-  {
-    "name": "Malnutrition",
-    "timeframe": "Yearly",
-    "goalDataURI": "#",
-    "realDataURI": "#",
-    "label": "Malnutrition (per 100 inhabitants)",
-    "labels": ["1", "2", "3", "4", "5"],
-    "data": [10, 15, 3],
-    "goalData": [11, 2, 4, 9, 12]
-  }
-]
 
 function createTableRow(dataset) {
   const { name, timeframe, goalDataURI, realDataURI, label, labels, data, goalData } = dataset
@@ -97,7 +66,7 @@ function createLineChart(data, goalData, label, labels) {
         "borderColor": "rgba(200, 120, 200, 1)"
       }, {
         "label": `${label} (goal)`,
-        "data": goalData,
+        "data": Array(labels.length - goalData.length -1).fill(null).concat(goalData),
         "fill": false,
         "backgroundColor": "rgba(0, 0, 0, 0)",
         "borderColor": "rgba(120, 200, 200, 1)"
@@ -106,6 +75,10 @@ function createLineChart(data, goalData, label, labels) {
   })
 }
 
-datasets.forEach(dataset => {
-  datasetsTable.append(createTableRow(dataset))
-})
+fetch(datasetsURL)
+  .then(data => data.json())
+  .then(datasets => {
+    datasets.forEach(dataset => {
+      datasetsTable.append(createTableRow(dataset))
+    })
+  })
