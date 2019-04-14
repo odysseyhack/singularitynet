@@ -94,7 +94,7 @@ class Forecast:
         z = cntk.load_model(model_file)
         x_input = z.inputs[-1]
     
-        batch_size = self.input_dim * num_points
+        batch_size = self.input_dim
         predictions = []
         i = 0
         for x_batch, _ in self._next_batch(x, y, "data", batch_size):
