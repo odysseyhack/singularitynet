@@ -11,9 +11,9 @@ const datasets = [
     "goalDataURI": "#",
     "realDataURI": "#",
     "label": "Yield in tonnes",
-    "labels": ["1", "2", "3"],
+    "labels": ["1", "2", "3", "4", "5"],
     "data": [10, 15, 3],
-    "goalData": [11, 2, 4]
+    "goalData": [11, 2, 4, 9, 12]
   },
   {
     "name": "Death rate",
@@ -21,9 +21,9 @@ const datasets = [
     "goalDataURI": "#",
     "realDataURI": "#",
     "label": "Death rate (per 100 inhabitants)",
-    "labels": ["1", "2", "3"],
+    "labels": ["1", "2", "3", "4", "5"],
     "data": [10, 15, 3],
-    "goalData": [11, 2, 4]
+    "goalData": [11, 2, 4, 9, 12]
   },
   {
     "name": "Malnutrition",
@@ -31,9 +31,9 @@ const datasets = [
     "goalDataURI": "#",
     "realDataURI": "#",
     "label": "Malnutrition (per 100 inhabitants)",
-    "labels": ["1", "2", "3"],
+    "labels": ["1", "2", "3", "4", "5"],
     "data": [10, 15, 3],
-    "goalData": [11, 2, 4]
+    "goalData": [11, 2, 4, 9, 12]
   }
 ]
 
@@ -61,6 +61,12 @@ function createTableRow(dataset) {
 
   realDataLink.setAttribute("href", realDataURI)
 
+  const row = document.createElement("tr")
+  row.appendChild(document.createElement("td")).appendChild(chartLink)
+  row.appendChild(document.createElement("td")).appendChild(timeframeSpan)
+  row.appendChild(document.createElement("td")).appendChild(goalDataLink)
+  row.appendChild(document.createElement("td")).appendChild(realDataLink)
+
   chartLink.addEventListener("click", () => {
     if (!chartLink.hasAttribute("active")) {
       for (var element of document.getElementsByClassName("chart-link")) {
@@ -74,12 +80,6 @@ function createTableRow(dataset) {
       dataContainer.setAttribute("hidden", "")
     }
   })
-
-  const row = document.createElement("tr")
-  row.appendChild(document.createElement("td")).appendChild(chartLink)
-  row.appendChild(document.createElement("td")).appendChild(timeframeSpan)
-  row.appendChild(document.createElement("td")).appendChild(goalDataLink)
-  row.appendChild(document.createElement("td")).appendChild(realDataLink)
 
   return row
 }
