@@ -7,7 +7,7 @@ message Input {
 }
 
 message Output {
-    string output_points = 1;
+    repeated double output_points = 1;
 }
 
 service Forecast {
