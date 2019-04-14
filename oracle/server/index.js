@@ -8,6 +8,7 @@ const {
   forecasterFetchData
 } = require("./handlers")
 
+
 function start() {
   const server = new grpc.Server()
   server.addService(services.ForecasterService, { 

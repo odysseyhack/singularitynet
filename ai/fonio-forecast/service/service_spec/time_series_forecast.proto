@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message Input {
+    string model_file = 1;
+    int32 num_points = 2;
+    int32 input_dim = 3;
+}
+
+message Output {
+    repeated double output_points = 1;
+}
+
+service Forecast {
+    rpc forecast(Input) returns (Output) {}
+}
