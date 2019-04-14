@@ -1,19 +1,8 @@
 #!/bin/sh
+PWD=`pwd`
+REPO=`dirname ${PWD}`
 
-ROOT=..
-
-# compile protobuf
-python -m grpc_tools.protoc -I${ROOT}/oracle/protos --python_out=.  \
+python -m grpc_tools.protoc -I${REPO}/oracle/protos --python_out=.  \
 	--grpc_python_out=. oracle.proto
 
-# install SingularityNET SDK
-mkdir -p vendor
-git clone --depth=1 --single-branch \
-	--branch fix-rename-tmp-between-different-filesystems \
-	git@github.com:vsbogd/snet-cli.git \
-	./vendor/snet-cli
-pushd vendor/snet-cli
-sudo apt-get install libudev-dev libusb-1.0-0-dev
-./scripts/blockchain install
-pip install -e .
-popd
+docker build -t forecaster-agent .
