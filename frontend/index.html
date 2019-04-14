@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Afwan community dashboard - Powered by SingularityNET Nature 2.0</title>
+    <link href="./css/style.css" rel="stylesheet"> 
+</head>
+
+<body>
+    <div id="main-wrapper">
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="row page-titles">
+                    <div class="col p-md-0">
+                        <h4>Community: Afwan</h4>
+                        <small>(It means "You're welcome" in Chadian Arabic)</small>
+                    </div>
+                    <div class="col p-md-0">
+                        <h5 style="text-align: right;">Powered by SingularityNET Nature 2.0</h5>
+                    </div>
+                </div>
+                <div class="community-wrapper">
+                    <div class="community-heading-text">
+                        <h2>Open data for everyone in the
+                        <span class="text-primary">Community</span></h2>
+                    </div>
+                </div>
+                <div id="dataContainer" hidden>
+                    <div class="card transparent-card">
+                        <div class="card-header pb-0">
+                            <h4 class="card-title mt-2">Chart</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <canvas id="chart"></canvas>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card transparent-card">
+                            <div class="card-header pb-0">
+                                <h4 class="card-title mt-2">Data</h4>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-padded recent-order-list-table table-responsive-fix-big">
+                                        <thead>
+                                            <tr>
+                                                <th>Metric</th>
+                                                <th>Timeframe</th>
+                                                <th>Goal</th>
+                                                <th>Real-world data</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="datasetsTable">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
